@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="zephyr_allmysms.manager" autowire="true" autoconfigure="true" class="ZephyrHQ\AllMySMSBundle\Provider\AllMySMSManager" public="true">
+            <argument />
+            <argument />
+            <argument>%zephyr_allmysms.simulate%</argument>
+            <argument>%zephyr_allmysms.simple_sms%</argument>
+        </service>
+        <service alias="zephyr_allmysms.manager" id="ZephyrHQ\AllMySMSBundle\Provider\AllMySMSManagerInterface"></service>
+    </services>
+
+</container>

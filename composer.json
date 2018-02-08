@@ -1,0 +1,51 @@
+{
+    "name": "zephyr/allmysms-bundle",
+    "type": "symfony-bundle",
+    "description": "This bundle provides load of AllMySMS API for your Symfony Project",
+    "keywords": ["Symfony", "bundle", "sms", "mms", "allMySMS", "api", "rest"],
+    "homepage": "https://github.com/ZephyrHQ/AllMySMSBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nicolas de Marqué",
+            "email": "ndm@zephyr-web.fr",
+            "homepage": "https://github.com/nicodmf"
+        },
+        {
+            "name": "Zephyr Community",
+            "homepage": "https://github.com/ZephyrHQ/AllMySMSBundle/graphs/contributors"
+        }
+    ],
+    "require": {
+        "php": "^5.5|^7.0",
+        "symfony/framework-bundle": "^4.0"
+    },
+    "require-dev": {
+        "symfony/phpunit-bridge": "~3.3",
+        "symfony/browser-kit": "^2.8|^3.0|^4.0",
+        "symfony/dom-crawler": "^2.8|^3.0|^4.0",
+        "symfony/yaml": "^2.8|^3.0|^4.0",
+        "friendsofphp/php-cs-fixer": "^1.1|^2.8@dev",
+        "lcobucci/jwt": "~3.2"
+    },
+    "suggest": {
+    },
+    "autoload": {
+        "psr-4": { "ZephyrHQ\\AllMySMSBundle\\": "" },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        }
+    },
+    "scripts": {
+        "test": [
+            "vendor/bin/simple-phpunit",
+            "ENCODER=lcobucci vendor/bin/simple-phpunit",
+            "PROVIDER=lexik_jwt vendor/bin/simple-phpunit"
+        ]
+    }
+}
